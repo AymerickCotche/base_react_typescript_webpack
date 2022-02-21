@@ -23,6 +23,7 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.5.3",
     "postcss-loader": "^6.2.1",
+    "resolve-url-loader": "^5.0.0",
     "sass": "^1.49.8",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
@@ -39,7 +40,7 @@
   "main": "./src/index.tsx",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
-    "build:prod": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "build": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
