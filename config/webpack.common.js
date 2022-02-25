@@ -22,11 +22,17 @@ module.exports = {
     filename: 'js/[name].[contenthash].js',
   },
   resolve: {
-    alias: {
-      src: paths.src,
-      app: paths.src,
-    },
+    // alias: {
+    //   src: paths.src,
+    //   app: paths.src,
+    // },
     extensions: ['', '.js', '.jsx', '.tsx', '.ts'],
+    plugins: [
+      new TsconfigPathsPlugin({
+        configFile: path.resolve('./config/tsconfig.json'),
+        extensions: ['', '.js', '.jsx', '.tsx', '.ts'],
+      }),
+    ],
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -46,7 +52,6 @@ module.exports = {
       favicon: paths.assets + '/favicon.ico',
       template: paths.assets + '/index.html',
     }),
-    new TsconfigPathsPlugin({ configFile: 'tsconfig.json' }),
   ],
 
   module: {
