@@ -22,10 +22,6 @@ module.exports = {
     filename: 'js/[name].[contenthash].js',
   },
   resolve: {
-    // alias: {
-    //   src: paths.src,
-    //   app: paths.src,
-    // },
     extensions: ['', '.js', '.jsx', '.tsx', '.ts'],
     plugins: [
       new TsconfigPathsPlugin({
